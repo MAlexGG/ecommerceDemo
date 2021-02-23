@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU RESTAURANTE</title>
+</head>
+
+<body>
+    <div class="body1" style="display: block;">
+        <header>
+            <img class="logo" src="./Images/logo.png" alt="logo">
+        </header>
+
+        <main>
+            <h1>Food For Home</h1>
+            <p class="slogan">Lorem ipsum dolor sit amet consectetur </p>
+
+            <div class="categorias"></div>
+
+            <div class="platos"></div>
+
+        </main>
+
+        <footer>
+            <button class="icoFooter" onclick="reinicio()"><img src="./Images/hogar.svg"></button>
+            <button class="icoFooter"><img src="./Images/charla.svg"></button>
+            <button class="icoSend" onclick="enviarCarrito()"><img src="./Images/envio.svg"></button>
+            <button class="icoFooter"><img src="./Images/corazon.svg"></button>
+            <button class="icoFooter"><img src="./Images/usuario.svg"></button>
+
+
+
+        </footer>
+    </div>
+
+
+
+    <div class="body2" style="display: none;">
+        <header>
+
+            <button class="back" onclick="retorno()"> <img class="flech" src="./Images/flecha-izquierda.svg"> </button>
+            <button class="del" onclick="vaciarArray()">
+                <img class="basura" src="./Images/basura.png"></button>
+
+        </header>
+        <main>
+            <h3> My cart</h3>
+
+            <div class="platos2"></div>
+        </main>
+
+        <footer class="footerCarrito">
+            <div class="total">
+                <div class="text">
+                    <p>Subtotal</p>
+                    <p>Tax % Fees</p>
+                    <p>Delivery</p>
+                    <p>TOTAL</p>
+                </div>
+
+                <div class="subtotal">
+                    <p class="subtotalPrecio">0</p>
+                    <p class="impuestos">0</p>
+                    <p class="delivery">2.00 €</p>
+                    <p class="totalPrecio">0</p>
+                </div>
+
+                <button class="envio" onclick="enviarPedido()">Enviar pedido</button>
+
+            </div>
+        </footer>
+    </div>
+
+    <script src="cat.js"></script>
+    <script src="platos.js"></script>
+    <script src="filtrado.js"></script>
+    <script src="desglosePrecio.js"></script>
+    <script src="contador.js"></script>
+    <script src="cambiarPantalla.js"></script>
+    <script src="pintarCarrito.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.2.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.2.8/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+</body>
+
+</html>

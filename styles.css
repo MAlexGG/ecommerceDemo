@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+/* font-family: 'Montserrat', sans-serif; */
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.logo {
+  width: 30vw;
+  height: auto;
+}
+
+.menuImg {
+  width: 10vw;
+  height: auto;
+}
+
+.menu {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.subButton {
+  display: none;
+}
+
+p {
+  color: #c9cace;
+}
+
+h1 {
+  padding-left: 5%;
+}
+.slogan {
+  padding-left: 5%;
+}
+
+nav {
+  padding-right: 5%;
+}
+.categorias {
+  display: inline-block;
+  width: 100vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  position: sticky;
+  top: 0%;
+  background-color: #fafafa;
+}
+
+.categorias::-webkit-scrollbar {
+  display: none;
+}
+
+.contenedorCategorias {
+  width: 91px;
+  height: 105px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 9px 19px rgba(0, 0, 0, 0.1);
+  margin: 5px;
+  display: inline-grid;
+  cursor: pointer;
+  text-align: center;
+}
+
+.contenedorCategoriasClick {
+  width: 96px;
+  height: 110px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 9px 19px #ff6b00;
+  margin: 5px;
+  display: inline-grid;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+.contenedorCategoriasImg {
+  width: 80%;
+  height: auto;
+  justify-self: center;
+  align-self: center;
+}
+
+.contenedorCategoriasImgClick{
+  width: 90%;
+  height: auto;
+  justify-self: center;
+  align-self: center;
+}
+
+.textoCategorias {
+  color: black;
+  font-size: 70%;
+  font-weight: 500;
+  line-height: 50%;
+  margin: 0px;
+
+
+}
+
+.textoCategoriasClick{
+  color: #ff6b00;
+  font-size: 80%;
+  font-weight: 500;
+  line-height: 50%;
+  margin: 0px;
+  font-style: bold;
+  
+}
+
+.price {
+  color: #ff6b00;
+  font-weight: 600;
+}
+
+.platos {
+  width: auto;
+  padding-bottom: 65px;
+}
+.platos::-webkit-scrollbar {
+  display: none;
+}
+
+.infoPlatos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 2vh;
+  padding-left: 5%;
+}
+
+.infoPlatos img {
+  width: 118px;
+  height: 123px;
+  border-radius: 18px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.infoDetalle {
+  margin-left: 7%;
+}
+
+.infoDetalle p {
+  margin: 6px;
+}
+
+h4 {
+  margin: 4px;
+}
+
+.counter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-left: 6px;
+}
+.counter button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: white;
+  color: #c9cace;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.counterLeft {
+  border-radius: 2px 0px 0px 2px;
+}
+
+.counterRight {
+  border-radius: 0px 2px 2px 0px;
+}
+
+.counter p {
+  width: 30px;
+  height: 30px;
+  background-color: #f0f0f2;
+  color: black;
+  margin: 0px;
+  text-align: center;
+  line-height: 28px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  background-color: whitesmoke;
+  position: fixed;
+  bottom: 0px;
+}
+button {
+  outline: none;
+}
+.icoFooter {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.icoFooter img {
+  width: 20px;
+  opacity: 0.5;
+}
+
+.icoSend {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ff6b00;
+  box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  position: relative;
+  top: -20px;
+}
+
+.icoSend img {
+  width: 40px;
+  filter: invert();
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  header {
+    justify-content: center;
+  }
+  .menu {
+    display: none;
+  }
+  h1 {
+    padding: 1%;
+    text-align: center;
+  }
+  .slogan {
+    padding: 1%;
+    text-align: center;
+  }
+  .categorias { 
+    width: auto;
+    margin: auto;
+  }
+
+  .contenedorCategorias {
+    width: 209px;
+    height: 140px;
+  }
+
+  .contenedorCategorias img {
+    width: 60%;
+    padding-top: 1%;
+  }
+
+  .contenedorCategorias p {
+    font-size: 117%;
+  }
+
+  .infoDetalle {
+    width: 36%;
+  }
+  .infoDetalle p {
+    font-size: 1.5em;
+  }
+
+  .infoDetalle h4 {
+    font-size: 1.5em;
+  }
+
+  .platos {
+    width: 100%;
+  }
+
+  .infoPlatos {
+    justify-content: center;
+  }
+  .infoPlatos img {
+    width: 310px;
+    height: 150px;
+  }
+  .counter button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+  }
+  .counter p {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+

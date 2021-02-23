@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    padding: 0;
+}
+body {
+    background-color: #FAFAFA;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+    padding: 2%;
+}
+   
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height: 40px;
+    border:none;
+    background-color: #F0F0F2;
+    border-radius: 2px;
+    
+}
+.flech {
+    width: 80%;
+    height: auto;
+}
+
+.del{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height: 40px;
+    border:none;
+    background-color: transparent;
+ 
+}
+.basura {
+    width:80%;
+    height: auto;
+    
+}
+
+h3 {
+    padding:5%;
+}
+
+.price {
+    color: #FF6B00;
+    font-weight: 600;
+}
+
+.platos2 {
+    width: auto;
+    height: 60vh;
+    overflow:  scroll;
+   
+}
+.platos2::-webkit-scrollbar{
+   display: none;
+}
+
+.infoPlatos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 2vh;
+    padding-left: 5%;
+}
+
+
+.image {
+    width: 118px;
+    height: 123px;
+    border-radius: 18px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.infoDetalle {
+    margin-left: 7%;
+}
+
+.infoDetalle p{
+    margin: 6px;
+}
+
+h4 {
+    margin: 4px;
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 6px;
+}
+.counter button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: white;
+    color: #C9CACE;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.counterLeft {
+    border-radius: 2px 0px 0px 2px;
+}
+
+.counterRight {
+    border-radius: 0px 2px 2px 0px;
+}
+
+.counter p {
+    width: 30px;
+    height: 30px;
+    background-color: #F0F0F2;
+    color: black;
+    margin: 0px;
+    text-align: center;
+    line-height: 28px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+.total {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 30vh;
+    background-color: #FF6B00;
+    border-radius: 33px  33px  0px 0px;
+    justify-content: space-around;
+    align-content: center;
+
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+
+
+}
+.text p{
+    height: auto;
+    color: #FBE2A1;
+    opacity: (0.5);
+}
+
+.subtotal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:50vw;
+   
+}
+.subtotal p{
+    height: auto;
+    color: #FBE2A1;
+    font-weight: 600;
+}
+
+.envio {
+    width: 70%;
+    height: 20%;
+    border-radius:10px ;
+    background-color: white;
+    border: none;
+    font-weight: 600;
+    color:black;
+    margin-top: 10%;
+}
+
+.footerCarrito{
+    position: sticky;
+}
+
+
+@media screen and (min-width:768px){
+
+    .image{
+        width: 250px;
+        
+    }
+
+    h3{
+        text-align:center ;
+    }
+    .platos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .infoDetalle {
+        width: 30vw;
+    }
+
+
+
+}
