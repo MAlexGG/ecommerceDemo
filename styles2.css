@@ -1,6 +1,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
     /* font-family: 'Montserrat', sans-serif; */
     
+     :root {
+        --colorBorde: linear-gradient(rgba(255, 255, 255, 0.7)), linear-gradient(rgba(255, 255, 255, 0.5)), linear-gradient(rgb(245, 83, 8)), linear-gradient(rgba(245, 83, 8, 0.5));
+    }
+    
     * {
         font-family: 'Montserrat', sans-serif;
         margin: 0;
@@ -194,15 +198,15 @@
     .cajaFormulario {
         background: linear-gradient( rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
         backdrop-filter: blur(10px);
-        position: absolute;
+        position: fixed;
         top: 50%;
         left: 50%;
-        width: 75vw;
-        height: 70vw;
-        border: solid 4px linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+        width: 80vw;
+        height: 100vw;
         transform: translate(-50%, -50%);
         z-index: 2;
-        border-radius: 20px;
+        border: 2px solid var(--colorBorde);
+        border-radius: 30px;
     }
     
     @media screen and (min-width: 768px) {
