@@ -1,13 +1,16 @@
+let home = document.querySelector(".icoFooterHome .homeSeleccionado")
+console.log(home);
+
 function filtrado(categoria) {
-    categoriaTexto= categoria.querySelector("p").innerHTML;
-    
+    categoriaTexto = categoria.querySelector("p").innerHTML;
 
-let dishes = "";
 
-function pintarMenu(){
-    for (let i = 0; i < listaPlatos.length; i++){
-        if(categoriaTexto === listaPlatos[i].cat){
-    dishes+= `<div class="infoPlatos ${listaPlatos[i].cat}" data-numero="${listaPlatos[i].id}">
+    let dishes = "";
+
+    function pintarMenu() {
+        for (let i = 0; i < listaPlatos.length; i++) {
+            if (categoriaTexto === listaPlatos[i].cat) {
+                dishes += `<div class="infoPlatos ${listaPlatos[i].cat}" data-numero="${listaPlatos[i].id}">
     <img src="${listaPlatos[i].img}">
     <div class="infoDetalle">
         <p class="price">$${listaPlatos[i].precio}</p>
@@ -20,12 +23,12 @@ function pintarMenu(){
         </div>
     </div>
 </div>`
-}
-}
-}
+            }
+        }
+    }
 
-pintarMenu();
-document.querySelector(".platos").innerHTML = dishes;
+    pintarMenu();
+    document.querySelector(".platos").innerHTML = dishes;
 }
 
 
@@ -35,21 +38,19 @@ let textoCategoria = document.querySelectorAll(".textoCategorias")
 let imagenCategoria = document.querySelectorAll(".contenedorCategoriasImg")
 
 
-categorias.forEach(category =>{
-    category.addEventListener('click', function(e){
+
+categorias.forEach(category => {
+    category.addEventListener('click', function(e) {
         categorias.forEach(cat => cat.classList.remove('contenedorCategoriasClick'))
         this.classList.add('contenedorCategoriasClick')
         textoCategoria.forEach(txt => txt.classList.remove('textoCategoriasClick'))
         this.childNodes[3].classList.add('textoCategoriasClick')
         textoCategoria.forEach(img => img.classList.remove('contenedorCategoriasImgClick'))
         this.childNodes[1].classList.add('contenedorCategoriasImgClick')
-        
+
+
+        home.classList.remove('homeSeleccionado')
+
+
     })
 })
-
-
-
-
-
-
-

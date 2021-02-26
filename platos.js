@@ -1,5 +1,4 @@
-let listaPlatos = [
-    {
+let listaPlatos = [{
         nombre: "Plato 01",
         descripcion: "With cheese sauce",
         precio: 9.00,
@@ -84,10 +83,10 @@ let listaPlatos = [
 
 
 
-function pintarMenu(){
-let dishes = "";
-    for (let i = 0; i < listaPlatos.length; i++){
-    dishes+= `<div class="infoPlatos ${listaPlatos[i].cat}" data-numero="${listaPlatos[i].id}">
+function pintarMenu() {
+    let dishes = "";
+    for (let i = 0; i < listaPlatos.length; i++) {
+        dishes += `<div class="infoPlatos ${listaPlatos[i].cat}" data-numero="${listaPlatos[i].id}">
     <img src="${listaPlatos[i].img}">
     <div class="infoDetalle">
         <p class="price">$${listaPlatos[i].precio}</p>
@@ -100,22 +99,27 @@ let dishes = "";
         </div>
     </div>
 </div>`
-}
+    }
 
-document.querySelector(".platos").innerHTML = dishes;
+    document.querySelector(".platos").innerHTML = dishes;
 
 }
 
 pintarMenu();
 
 
-function reinicio (){
+function reinicio() {
     pintarMenu();
-    
+
     let categorias = document.querySelectorAll(".contenedorCategorias")
     let textoCategoria = document.querySelectorAll(".textoCategorias")
+    let home = document.querySelector(".icoFooterHome .homeSeleccionado")
+
+
 
     categorias.forEach(cat => cat.classList.remove('contenedorCategoriasClick'))
     textoCategoria.forEach(txt => txt.classList.remove('textoCategoriasClick'))
-}
 
+    home.classList.add('homeSeleccionado')
+
+}
