@@ -1,3 +1,6 @@
+let home = document.querySelector(".icoFooterHome .homeSeleccionado")
+
+
 let listaPlatos = [{
         nombre: "Plato 01",
         descripcion: "With cheese sauce",
@@ -84,6 +87,8 @@ let listaPlatos = [{
 
 
 function pintarMenu() {
+    home.classList.add('homeSeleccionado')
+    console.log(home);
     let dishes = "";
     for (let i = 0; i < listaPlatos.length; i++) {
         dishes += `<div class="infoPlatos ${listaPlatos[i].cat}" data-numero="${listaPlatos[i].id}">
@@ -120,6 +125,6 @@ function reinicio() {
     categorias.forEach(cat => cat.classList.remove('contenedorCategoriasClick'))
     textoCategoria.forEach(txt => txt.classList.remove('textoCategoriasClick'))
 
-    home.classList.add('homeSeleccionado')
+    
 
 }

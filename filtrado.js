@@ -1,5 +1,4 @@
-let home = document.querySelector(".icoFooterHome .homeSeleccionado")
-console.log(home);
+
 
 function filtrado(categoria) {
     categoriaTexto = categoria.querySelector("p").innerHTML;
