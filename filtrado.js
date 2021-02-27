@@ -47,9 +47,8 @@ categorias.forEach(category => {
         this.childNodes[3].classList.add('textoCategoriasClick')
         textoCategoria.forEach(img => img.classList.remove('contenedorCategoriasImgClick'))
         this.childNodes[1].classList.add('contenedorCategoriasImgClick')
-
-
         home.classList.remove('homeSeleccionado')
+    
 
 
     })
