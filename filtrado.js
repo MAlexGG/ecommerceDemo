@@ -33,6 +33,8 @@ document.querySelector(".platos").innerHTML = dishes;
 let categorias = document.querySelectorAll(".contenedorCategorias")
 let textoCategoria = document.querySelectorAll(".textoCategorias")
 let imagenCategoria = document.querySelectorAll(".contenedorCategoriasImg")
+let home = document.querySelector(".icoFooterHome")
+console.log(home);
 
 
 categorias.forEach(category =>{
