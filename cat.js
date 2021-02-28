@@ -1,42 +1,47 @@
-let listaCategorias= [ 
+let listaCategorias = [
 
-    { nombre: "Breakfast",
-      img:"./Images/breakfast.png",
-      id: 0
+    {
+        nombre: "Desayuno",
+        img: "./Images/desayuno.svg",
+        id: 0
     },
 
-    { nombre: "Fast Food",
-      img:"./Images/fastfood.png",
-      id: 1
+    {
+        nombre: "Comida Rápida",
+        img: "./Images/comidaRapida.svg",
+        id: 1
     },
 
-    { nombre: "Dinner",
-      img:"./Images/dinner.png",
-      id: 2
+    {
+        nombre: "Cena",
+        img: "./Images/cena.svg",
+        id: 2
     },
 
-    { nombre: "Postres",
-      img:"./Images/postres.png",
-      id: 3
+    {
+        nombre: "Postres",
+        img: "./Images/postres.svg",
+        id: 3
     },
 
-    { nombre: "Bebidas",
-      img:"./Images/bebidas.png",
-      id: 4
+    {
+        nombre: "Bebidas",
+        img: "./Images/bebidas.svg",
+        id: 4
     }
 
 ];
 
-let sliderCat= "";
+let sliderCat = "";
 
-function pintarCat(){
-    for (let i=0; i<listaCategorias.length; i++){
-        sliderCat+= `<div id="contenedorCategorias" class="contenedorCategorias" onclick="filtrado(this)" data-numero="${listaCategorias[i].id}" style="border:none;">
+function pintarCat() {
+    for (let i = 0; i < listaCategorias.length; i++) {
+        sliderCat += `<div id="contenedorCategorias" class="contenedorCategorias" onclick="filtrado(this)" data-numero="${listaCategorias[i].id}" style="border:none;">
         <img class="contenedorCategoriasImg" src="${listaCategorias[i].img}" >
         <p class = "textoCategorias">${listaCategorias[i].nombre}</p>
     </div>`
-    } 
+    }
 }
 
 pintarCat();
-document.querySelector(".categorias").innerHTML=sliderCat;
+document.querySelector(".categorias").innerHTML = sliderCat;
