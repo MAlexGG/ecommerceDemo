@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+let home = document.querySelector(".icoFooterHome .homeSeleccionado")
+
+
+>>>>>>> 2789a2a96064fb22e5a1bd8c959d2714560f85a8
 let listaPlatos = [{
         nombre: "Plato 01",
         descripcion: "Con vegetales asados",
@@ -84,6 +90,11 @@ let listaPlatos = [{
 
 
 function pintarMenu() {
+<<<<<<< HEAD
+=======
+    home.classList.add('homeSeleccionado')
+    console.log(home);
+>>>>>>> 2789a2a96064fb22e5a1bd8c959d2714560f85a8
     let dishes = "";
     for (let i = 0; i < listaPlatos.length; i++) {
         dishes += `<div class="infoPlatos ${listaPlatos[i].cat}" data-numero="${listaPlatos[i].id}">
@@ -113,7 +124,16 @@ function reinicio() {
 
     let categorias = document.querySelectorAll(".contenedorCategorias")
     let textoCategoria = document.querySelectorAll(".textoCategorias")
+    let home = document.querySelector(".icoFooterHome .homeSeleccionado")
+
+
 
     categorias.forEach(cat => cat.classList.remove('contenedorCategoriasClick'))
     textoCategoria.forEach(txt => txt.classList.remove('textoCategoriasClick'))
+<<<<<<< HEAD
+=======
+
+    
+
+>>>>>>> 2789a2a96064fb22e5a1bd8c959d2714560f85a8
 }
