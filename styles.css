@@ -246,9 +246,7 @@ button {
 }
 
 .homeSeleccionado {
-    box-shadow: 20px 9px 19px #ff6b00;
-    background: #ff6b00;
-
+    filter: drop-shadow(5px 2px 4px #ff6a00);
 }
 
 .icoSend {
