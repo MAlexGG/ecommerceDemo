@@ -23,10 +23,19 @@ function retorno() {
 
     dishes2 = "";
     pintarMenu();
-    console.log(carrito);
-    console.log(listaPlatos);
+    eliminarFiltro();
 
-    let catClick = document.querySelectorAll(".contenedorCategoriasClick");
-    catClick.classList.remove("contenedorCategoriasClick");
 
+}
+
+
+function eliminarFiltro() {
+    let categorias = document.querySelectorAll(".contenedorCategorias")
+    let textoCategoria = document.querySelectorAll(".textoCategorias")
+
+    categorias.forEach(cat => cat.classList.remove('contenedorCategoriasClick'))
+
+    textoCategoria.forEach(txt => txt.classList.remove('textoCategoriasClick'))
+
+    textoCategoria.forEach(img => img.classList.remove('contenedorCategoriasImgClick'))
 }
