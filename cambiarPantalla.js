@@ -32,10 +32,12 @@ function retorno(){
 function eliminarFiltro(){
     let categorias = document.querySelectorAll(".contenedorCategorias")
     let textoCategoria = document.querySelectorAll(".textoCategorias")
+    let imagenCategoria = document.querySelectorAll(".contenedorCategoriasImg")
+   
 
     categorias.forEach(cat => cat.classList.remove('contenedorCategoriasClick'))
         
     textoCategoria.forEach(txt => txt.classList.remove('textoCategoriasClick'))
         
-    textoCategoria.forEach(img => img.classList.remove('contenedorCategoriasImgClick'))
+    imagenCategoria.forEach(img => img.classList.remove('contenedorCategoriasImgClick'))
 }
