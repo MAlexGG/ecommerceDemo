@@ -233,6 +233,24 @@ button {
     opacity: 0.5;
 }
 
+.icoFooterHome {
+    display: flex;
+    width: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.icoFooterHome img {
+    width: 40px;
+}
+
+.homeSeleccionado {
+    box-shadow: 20px 9px 19px #ff6b00;
+    background: #ff6b00;
+
+}
+
 .icoSend {
     width: 65px;
     height: 65px;
