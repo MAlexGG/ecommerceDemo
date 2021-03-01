@@ -66,6 +66,9 @@ function enviarCarrito() {
     cambiarPantalla();
     pintarCarrito();
     sumarSubtotal();
+
+
+
 }
 
 function vaciarArray() {
