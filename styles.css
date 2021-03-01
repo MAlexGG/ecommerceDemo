@@ -241,9 +241,14 @@ button {
     cursor: pointer;
 }
 
+.icoFooterHome img {
+    width: 40px;
+}
+
 .homeSeleccionado {
-   
-    background-color: #ff6b00;
+    box-shadow: 20px 9px 19px #ff6b00;
+    background: #ff6b00;
+
 }
 
 .icoSend {
