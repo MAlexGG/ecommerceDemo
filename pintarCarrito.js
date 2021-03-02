@@ -66,9 +66,22 @@ function enviarCarrito() {
     cambiarPantalla();
     pintarCarrito();
     sumarSubtotal();
+}
 
+function continuarPedido() {
+    let form = document.querySelector(".cajaFormulario");
 
+    if (form.style.display == "none") {
+        form.style.display = "flex";
+    }
+}
 
+function cancelarPedido() {
+    let form = document.querySelector(".cajaFormulario");
+
+    if (form.style.display == "flex") {
+        form.style.display = "none";
+    }
 }
 
 function vaciarArray() {
@@ -82,31 +95,15 @@ function vaciarArray() {
 }
 
 function enviarPedido() {
-    let nombre = prompt("Introduce tu nombre y apellido:");
-    if (nombre === null || nombre === "") {
-        alert("Introduce un nombre por favor");
-        return;
-    } else {
-        let mail = prompt("Introduce tu mail para enviar el resguardo de la compra:");
-        if (mail === null || mail === "") {
-            alert("Introduce un mail válido por favor");
-            return;
-        } else {
-            let direccion = prompt("Introduce tu dirección donde se enviará el pedido:");
-            if (direccion === null || direccion === "") {
-                alert("Introduce una dirección por favor");
-                return;
-            } else {
-                enviarMensaje();
-                let totalPrecio = document.querySelector(".totalPrecio").innerHTML
-                window.open("https://api.whatsapp.com/send/?phone=" + numeroEmpresa + "&text=" + "Nombre: " + nombre + " - " + "Mail: " + mail + " - " + "Dirección: " + direccion + " - " + pedido + "Precio total =" + totalPrecio + "&app_absent=0");
-                retorno();
-                location.reload();
-            }
-        }
-    }
+    enviarMensaje();
+    let totalPrecio = document.querySelector(".totalPrecio").innerHTML
+    let nombre = document.getElementById("nombre").value;
+    let direccion = document.getElementById("direccion").value;
+    let comentario = document.getElementById("comentario").value;
+    window.open("https://api.whatsapp.com/send/?phone=" + numeroEmpresa + "&text=" + "Nombre: " + nombre + " - " + pedido + "Precio total =" + totalPrecio + " - " + "Dirección: " + direccion + " - " + "Comentario: " + comentario + "&app_absent=0");
+    retorno();
+    location.reload();
 }
-
 
 function enviarMensaje() {
     for (let i = 0; i < carrito.length; i++) {

@@ -48,9 +48,19 @@
             <div class="platos2"></div>
 
         </main>
-        <div class="cajaFormulario">
-
+        <div class="cajaFormulario" style="display: none;">
+            <form id="formID" method="get">
+                <p class="txtForm"><input type="text" name="nombre" placeholder="Nombres y apellidos" id="nombre"></p>
+                <p class="txtForm"><input type="text" name="mail" placeholder="Mail"></p>
+                <p class="txtForm"><input type="text" name="direccion" placeholder="Dirección de envío" id="direccion"></p>
+                <p class="txtForm"><textarea class="commentForm" type="text" name="comentarios" placeholder="Comentarios adicionales" id="comentario"></textarea></p>
+                <p>
+                    <input class="btnForm" type="submit" value="Enviar" onclick="enviarPedido()">&nbsp; &nbsp; &nbsp;
+                    <input class="btnForm" type="reset" value="Cancelar" onclick="cancelarPedido()">
+                </p>
+            </form>
         </div>
+
         <footer class="footerCarrito">
             <div class="total">
                 <div class="text">
@@ -67,7 +77,7 @@
                     <p class="totalPrecio">0</p>
                 </div>
 
-                <button class="envio" onclick="enviarPedido()">Enviar pedido</button>
+                <button class="envio" onclick="continuarPedido()">Continuar compra</button>
             </div>
         </footer>
 
