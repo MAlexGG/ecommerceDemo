@@ -1,61 +1,63 @@
-let listaPlatos = [
-    {
+let home = document.querySelector(".icoFooterHome .homeSeleccionado")
+
+
+let listaPlatos = [{
         nombre: "Plato 01",
-        descripcion: "With cheese sauce",
+        descripcion: "Con vegetales asados",
         precio: 9.00,
         img: "./Images/pollo.jpg",
         id: 0,
         cantidad: 0,
-        cat: "Dinner"
+        cat: "Cena"
     },
     {
         nombre: "Plato 02",
-        descripcion: "With basmati rice",
+        descripcion: "Con café y zumo",
         precio: 23.00,
         img: "./Images/desayuno2.jpg",
         id: 1,
         cantidad: 0,
-        cat: "Breakfast"
+        cat: "Desayuno"
     },
     {
         nombre: "Plato 03",
-        descripcion: "With beef bacon",
+        descripcion: "Con papas fritas",
         precio: 21.00,
         img: "./Images/burgerfast.jpg",
         id: 2,
         cantidad: 0,
-        cat: "Fast Food"
+        cat: "Comida Rápida"
     },
     {
         nombre: "Plato 04",
-        descripcion: "With cheese sauce",
+        descripcion: "De distintos sabores",
         precio: 5.00,
         img: "./Images/pizafast.jpg",
         id: 3,
         cantidad: 0,
-        cat: "Fast Food"
+        cat: "Comida Rápida"
     },
     {
         nombre: "Plato 05",
-        descripcion: "With vegetables",
+        descripcion: "de ternera, pollo o vegetales",
         precio: 3.50,
         img: "./Images/DURmfast.jpg",
         id: 4,
         cantidad: 0,
-        cat: "Fast Food"
+        cat: "Comida Rápida"
     },
     {
         nombre: "Plato 06",
-        descripcion: "With eggs and toasts",
+        descripcion: "Con café y zumo",
         precio: 15.00,
         img: "./Images/break1.jpg",
         id: 5,
         cantidad: 0,
-        cat: "Breakfast"
+        cat: "Desayuno"
     },
     {
         nombre: "Plato 07",
-        descripcion: "With strawberry sauce",
+        descripcion: "Con salsa de fresas",
         precio: 4.50,
         img: "./Images/cheesecake.jpg",
         id: 6,
@@ -84,10 +86,12 @@ let listaPlatos = [
 
 
 
-function pintarMenu(){
-let dishes = "";
-    for (let i = 0; i < listaPlatos.length; i++){
-    dishes+= `<div class="infoPlatos ${listaPlatos[i].cat}" data-numero="${listaPlatos[i].id}">
+function pintarMenu() {
+    home.classList.add('homeSeleccionado')
+    console.log(home);
+    let dishes = "";
+    for (let i = 0; i < listaPlatos.length; i++) {
+        dishes += `<div class="infoPlatos ${listaPlatos[i].cat}" data-numero="${listaPlatos[i].id}">
     <img src="${listaPlatos[i].img}">
     <div class="infoDetalle">
         <p class="price">$${listaPlatos[i].precio}</p>
@@ -100,22 +104,27 @@ let dishes = "";
         </div>
     </div>
 </div>`
-}
+    }
 
-document.querySelector(".platos").innerHTML = dishes;
+    document.querySelector(".platos").innerHTML = dishes;
 
 }
 
 pintarMenu();
 
 
-function reinicio (){
+function reinicio() {
     pintarMenu();
-    
+
     let categorias = document.querySelectorAll(".contenedorCategorias")
     let textoCategoria = document.querySelectorAll(".textoCategorias")
+    let home = document.querySelector(".icoFooterHome .homeSeleccionado")
+
+
 
     categorias.forEach(cat => cat.classList.remove('contenedorCategoriasClick'))
     textoCategoria.forEach(txt => txt.classList.remove('textoCategoriasClick'))
-}
 
+
+
+}
