@@ -24,8 +24,6 @@ function retorno() {
     dishes2 = "";
     pintarMenu();
     eliminarFiltro();
-
-
 }
 
 
@@ -36,8 +34,6 @@ function eliminarFiltro() {
 
 
     categorias.forEach(cat => cat.classList.remove('contenedorCategoriasClick'))
-
     textoCategoria.forEach(txt => txt.classList.remove('textoCategoriasClick'))
-
     imagenCategoria.forEach(img => img.classList.remove('contenedorCategoriasImgClick'))
 }
