@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
 
 /* font-family: 'Montserrat', sans-serif; */
 
@@ -17,6 +17,10 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+.contenedorLogo {
+    width: 100%;
 }
 
 .logo {
@@ -44,11 +48,11 @@ p {
 }
 
 h1 {
-    padding-left: 5%;
+    width: 100%;
 }
 
 .slogan {
-    padding-left: 5%;
+    width: 100%;
 }
 
 nav {
@@ -57,7 +61,7 @@ nav {
 
 .categorias {
     display: inline-block;
-    width: 100vw;
+    width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -145,7 +149,7 @@ nav {
     flex-direction: row;
     flex-wrap: nowrap;
     margin-bottom: 2vh;
-    padding-left: 5%;
+    margin-left: 5%;
 }
 
 .infoPlatos img {
@@ -208,7 +212,7 @@ h4 {
 footer {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 100vw;
     height: auto;
     align-items: center;
     background-color: whitesmoke;
@@ -247,7 +251,6 @@ button {
 
 .homeSeleccionado {
     filter: invert(0.5) sepia(1) saturate(20) hue-rotate(5deg) drop-shadow(0.1px 0.1px 2px #ff6b00);
-
     transform: scale(1.15)
 }
 
@@ -280,8 +283,18 @@ button {
     .menu {
         display: none;
     }
+    .contenedorLogo {
+        display: flex;
+        justify-content: center;
+    }
+    .logo {
+        width: 16vw;
+    }
     h1 {
         padding: 1%;
+        text-align: center;
+    }
+    h3 {
         text-align: center;
     }
     .slogan {
@@ -289,22 +302,21 @@ button {
         text-align: center;
     }
     .categorias {
-        width: auto;
         margin: auto;
     }
     .contenedorCategorias {
-        width: 209px;
-        height: 140px;
+        width: 175px;
+        height: 135px;
     }
     .contenedorCategorias img {
-        width: 60%;
+        width: 80%;
         padding-top: 1%;
     }
     .contenedorCategorias p {
         font-size: 117%;
     }
     .infoDetalle {
-        width: 36%;
+        width: 50vw;
     }
     .infoDetalle p {
         font-size: 1.5em;
@@ -313,10 +325,15 @@ button {
         font-size: 1.5em;
     }
     .platos {
+        display: flex;
+        flex-direction: column;
         width: 100%;
+        margin-top: 3%;
     }
     .infoPlatos {
         justify-content: center;
+        width: 90vw;
+        margin-left: 0%;
     }
     .infoPlatos img {
         width: 310px;
@@ -332,4 +349,12 @@ button {
         height: 40px;
         line-height: 40px;
     }
-}
+    .image {
+        width: 250px;
+    }
+    .text {
+        font-size: 25px;
+    }
+    .subtotal {
+        font-size: 25px;
+    }
